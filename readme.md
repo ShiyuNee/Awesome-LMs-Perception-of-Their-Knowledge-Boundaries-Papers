@@ -6,9 +6,27 @@
 
 Trigger retrieval when language model can not provide correct answers. Therefore, many work focuses on **determining whether the model can provide a correct answer.**
 
+> :star: represents the same series of papers
+
 ## LMs' Perception of Their Knowledge Boundaries
 
 These methods focus on determining whether the model can provide a correct answer but do not perform adaptive Retrieval-Augmented Generation (RAG).
+
+### Survey or Foundation Papers
+
+These papers are surveys or fairly comprehensive foundational studies.
+
+- [Anthropic] [Language Models (Mostly) Know What They Know](https://arxiv.org/abs/2207.05221) *Saurav Kadavath et.al.* 11 Jul 2022
+
+  > Study whether language models can evaluate the validity of their own claims and predict which questions they will be able to answer correctly
+
+- [Survey] [Know Your Limits: A Survey of Abstention in Large Language Models](https://arxiv.org/abs/2407.18418) *Bingbing Wen et.al.* 25 Jul 2024
+
+  > Introduce a framework to examine abstention from three perspectives: the query, the model, and human values. We organize the literature on abstention methods, benchmarks, and evaluation metrics using this framework, and discuss merits and limitations of prior work
+
+- [Survey] [A Survey on the Honesty of Large Language Models](https://arxiv.org/abs/2409.18786) *Siheng Li et.al.* 27 Sep 2024
+
+  > A survey on the honesty of LLMs, covering its clarification, evaluation approaches, and strategies for improvement
 
 ### White-box Investigation
 
@@ -16,25 +34,29 @@ These methods require access to the full set of model parameters, such as for mo
 
 #### Training The Language Model
 
-- [EMNLP 2020, Token-prob-based] [Calibration of Pre-trained Transformers](https://arxiv.org/pdf/2003.07892) *Shrey Desai et.al.* 17 Mar 2020
+- [EMNLP 2020, **Token-prob-based Confidence**] [Calibration of Pre-trained Transformers](https://arxiv.org/pdf/2003.07892) *Shrey Desai et.al.* 17 Mar 2020
 
   > Investigate calibration in pre-trained transformer models & in-domain and OOD settings. Find: 1) Pre-trained models are calibrated in-domain. 2) Label smooth is better that temperature scaling in OOD setting
 
-- [TACL 2021, Token-prob-based] [How Can We Know When Language Models Know? On the Calibration of Language Models for Question Answering](https://arxiv.org/abs/2012.00955) *Zhengbao Jiang et.al.*  2 Dec 2020
+- [TACL 2021, **Token-prob-based Confidence**] [How Can We Know When Language Models Know? On the Calibration of Language Models for Question Answering](https://arxiv.org/abs/2012.00955) *Zhengbao Jiang et.al.*  2 Dec 2020
 
   >1)Investigate calibration (answerr: not good) in generative language models (e.g., T5) in QA task (OOD settings). 2) Examine the effectiveness of some methods (fine-tuning, post-hoc probability modification, or adjustment of the predicted outputs or inputs)
 
-- [TMLR 2022] [Teaching Models to Express Their Uncertainty in Words](https://arxiv.org/abs/2205.14334) *Stephanie Lin et.al.* 28 May 2022
+- [TMLR 2022, **Token-prob-based & Verbalized Confidence**] [Teaching Models to Express Their Uncertainty in Words](https://arxiv.org/abs/2205.14334) *Stephanie Lin et.al.* 28 May 2022
 
   >  The first time a model has been shown to express calibrated uncertainty about its own answers in natural language. For testing calibration, we introduce the CalibratedMath suite of tasks
 
-- [ACL 2023] [A Close Look into the Calibration of Pre-trained Language Models](https://arxiv.org/abs/2211.00151) *Yangyi Chen et.al.*  31 Oct 2022
+- [ACL 2023, **Token-prob-based Confidence**] [A Close Look into the Calibration of Pre-trained Language Models](https://arxiv.org/abs/2211.00151) *Yangyi Chen et.al.*  31 Oct 2022
 
   > Answer two questions: (1) Do PLMs learn to become calibrated in the training process? (No) (2) How effective are existing calibration methods? (learnable methods significantly reduce PLMs’ confidence in wrong predictions)
 
-- [NeurIPS 2024] [Alignment for Honesty](https://arxiv.org/abs/2312.07000) *Yuqing Yang et.al.* 12 Dec 2023
+- [NeurIPS 2024, **Verbalized Confidence & Self-consistency**] [Alignment for Honesty](https://arxiv.org/abs/2312.07000) *Yuqing Yang et.al.* 12 Dec 2023
 
   > 1)Establishing a precise problem definition and defining “honesty” 2)introduce a flexible training framework which emphasize honesty without sacrificing performance on other tasks
+
+- [:star: NeurIPS Safe Generative AI Workshop 2024, **Semantic Uncertainty**] [Fine-Tuning Large Language Models to Appropriately Abstain with Semantic Entropy](https://arxiv.org/abs/2410.17234) *Benedict Aaron Tjandra et.al.*  22 Oct 2024
+
+  > Existing methods rely on the existence of ground-truth labels or are limited to short-form responses. This paper proposes fine-tuning using semantic entropy, an uncertainty measure derived from introspection into the model which does not require external labels.
 
 #### Utilizing Internal States or Attention Weights
 
@@ -72,23 +94,28 @@ These papers focus on determining the truth of a statement or the model’s abil
 
 Need to access to the probability of generated tokens. Some methods also rely on the probability of generated tokens; however, since training is involved in the paper, they do not fall into this category.
 
-- [ICML 2017, Token-prob-based] [On Calibration of Modern Neural Networks](https://arxiv.org/abs/1706.04599) *Chuan Guo et.al.* 14 Jun 2017
+- [ICML 2017, **Token-prob-based Confidence**] [On Calibration of Modern Neural Networks](https://arxiv.org/abs/1706.04599) *Chuan Guo et.al.* 14 Jun 2017
 
   > Investigate calibration in modern neural networks, propose ECE metric, propose enhance calibration via temperature
 
-- [ICLR 2023] [Prompting GPT-3 To Be Reliable](https://arxiv.org/abs/2210.09150) *Chenglei Si et.al.* 17 Oct 2022
+- [ICLR 2023, **Token-prob-based Confidence & Self-consistency**] [Prompting GPT-3 To Be Reliable](https://arxiv.org/abs/2210.09150) *Chenglei Si et.al.* 17 Oct 2022
 
   > With appropriate prompts, GPT-3 is more reliable (both consistency-based and prob-based confidence estimation) than smaller-scale supervised models
 
-- [ICLR 2023 Spotlight, **Semantic Uncertainty**] [Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation](https://arxiv.org/abs/2302.09664)  *Lorenz Kuhn et.al.* 19 Feb 2023
+- [:star: ICLR 2023 Spotlight, **Semantic Uncertainty**, **Token-prob-based Confidence & Self-consistency**] [Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation](https://arxiv.org/abs/2302.09664)  *Lorenz Kuhn et.al.* 19 Feb 2023
 
   > Introduce semantic entropy—an entropy which incorporates linguistic invariances created by shared meanings
 
-- [ACL 2024] [Confidence Under the Hood: An Investigation into the Confidence-Probability Alignment in Large Language Models](https://arxiv.org/abs/2405.16282) *Abhishek Kumar et.al.* 25 May 2024
+- [ACL 2024, **Token-prob-based & Verbalized Confidence**] [Confidence Under the Hood: An Investigation into the Confidence-Probability Alignment in Large Language Models](https://arxiv.org/abs/2405.16282) *Abhishek Kumar et.al.* 25 May 2024
 
   > Investigate the alignment between LLMs' internal confidence and verbalized confidence
 
-- [CCIR 2024] [Are Large Language Models More Honest in Their Probabilistic or Verbalized Confidence?](https://arxiv.org/abs/2408.09773) *Shiyu Ni et.al.* 19 Aug 2024
+
+- [:star: Nature, **Semantic Uncertainty**] [Detecting hallucinations in large language models using semantic entropy](https://www.nature.com/articles/s41586-024-07421-0) *Sebastian Farquhar et.al.* 19 June 2024
+
+  > The expension of [Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation](https://arxiv.org/abs/2302.09664) 
+
+- [CCIR 2024, **Token-prob-based & Verbalized Confidence**] [Are Large Language Models More Honest in Their Probabilistic or Verbalized Confidence?](https://arxiv.org/abs/2408.09773) *Shiyu Ni et.al.* 19 Aug 2024
 
   > Conduct a comprehensive analysis and comparison of LLMs’ probabilistic perception and verbalized perception of their factual knowledge boundaries
 
@@ -96,23 +123,27 @@ Need to access to the probability of generated tokens. Some methods also rely on
 
 These methods only require access to the model’s text output. 
 
-- [EMNLP 2023, **Selfcheckgpt**] [Selfcheckgpt: Zero-resource black-box hallucination detection for generative large language models](https://arxiv.org/abs/2303.08896) *Potsawee Manakul et.al.* 15 Mar 2023
+- [EMNLP 2023, **Selfcheckgpt**, **Self-consistency**] [Selfcheckgpt: Zero-resource black-box hallucination detection for generative large language models](https://arxiv.org/abs/2303.08896) *Potsawee Manakul et.al.* 15 Mar 2023
 
   >  The first  to analyze model hallucination of general LLM responses, and is the first zero-resource hallucination detection solution that can be applied to black-box systems
 
-- [EMNLP 2023] [Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from Language Models Fine-Tuned with Human Feedback](https://arxiv.org/abs/2305.14975) *Katherine Tian et.al.* 24 May 2023
+- [ACL 2024, **Multi-LLM Collaboration**, **Outstanding paper award**] [Don't Hallucinate, Abstain: Identifying LLM Knowledge Gaps via Multi-LLM Collaboration](https://arxiv.org/abs/2402.00367)
+
+  > Aim to identify LLM knowledge gaps and abstain from answering questions when knowledge gaps are present. Contribution: 1) A critical evaluation and typology of diverse existing methods 2) Propose two novel, robust multi-LLM collaboration methods to detect LLM knowledge gaps, COOPERATE and COMPETE
+  
+- [EMNLP 2023, **Token-prob-based & Verbalized Confidence**] [Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from Language Models Fine-Tuned with Human Feedback](https://arxiv.org/abs/2305.14975) *Katherine Tian et.al.* 24 May 2023
 
   >Conduct a broad evaluation of methods for extracting confidence scores from RLHF-LMs
-  
-- [ACL 2023 Findings] [Do Large Language Models Know What They Don't Know?](https://arxiv.org/abs/2305.18153) *Zhangyue Yin et.al.* 29 May 2023
+
+- [ACL 2023 Findings, **Verbalized Confidence**] [Do Large Language Models Know What They Don't Know?](https://arxiv.org/abs/2305.18153) *Zhangyue Yin et.al.* 29 May 2023
 
   >  Evaluate LLMs’ self-knowledge by assessing their ability to identify unanswerable or unknowable questions
 
-- [ICLR 2024] [Can LLMs Express Their Uncertainty? An Empirical Evaluation of Confidence Elicitation in LLMs](https://arxiv.org/abs/2306.13063) *Miao Xiong et.al.*  22 Jun 2023
+- [ICLR 2024, **Self-consistency & Verbalized Confidence**] [Can LLMs Express Their Uncertainty? An Empirical Evaluation of Confidence Elicitation in LLMs](https://arxiv.org/abs/2306.13063) *Miao Xiong et.al.*  22 Jun 2023
 
   > Explore black-box approaches for LLM uncertainty estimation. Define a systematic framework with three components: prompting strategies for eliciting verbalized confidence, sampling methods for generating multiple responses, and aggregation techniques for computing consistency
 
-- [EMNLP 2023, **SAC3**] [SAC3: Reliable Hallucination Detection in Black-Box Language Models via Semantic-aware Cross-check Consistency](https://arxiv.org/abs/2311.01740) *Jiaxin Zhang et.al.* 3 Nov 2023 
+- [EMNLP 2023, **SAC3**, **Self-consistency & Multi-LLM Collaboration**] [SAC3: Reliable Hallucination Detection in Black-Box Language Models via Semantic-aware Cross-check Consistency](https://arxiv.org/abs/2311.01740) *Jiaxin Zhang et.al.* 3 Nov 2023 
 
   > Extend self-consistency across pertubed questions and different models
 
@@ -140,19 +171,19 @@ These methods focus directly on the “when to retrieve”, designing strategies
 
   > Propose a new framework to train an arbitrary LM to learn to **retrieve, generate, and critique （via generating special tokens）**to enhance the factuality and quality of generations, without hurting the versatility of LLMs.
 
-- [Arxiv, **Rowen**, Enhanced SAC3] [Retrieve Only When It Needs: Adaptive Retrieval Augmentation for Hallucination Mitigation in Large Language Models](https://arxiv.org/abs/2402.10612) *Hanxing Ding et.al.* 16 Feb 2024
+- [Arxiv, **Rowen**, **Enhanced SAC3**, **Self-consistency & Multi-LLM Collaboration**] [Retrieve Only When It Needs: Adaptive Retrieval Augmentation for Hallucination Mitigation in Large Language Models](https://arxiv.org/abs/2402.10612) *Hanxing Ding et.al.* 16 Feb 2024
 
   > Introduces Rowen which assesses the model’s uncertainty regarding the input query by evaluating the semantic **inconsistencies** in various responses generated **across different languages** or **models**.
 
-- [ACL 2024 Findings] [When Do LLMs Need Retrieval Augmentation? Mitigating LLMs' Overconfidence Helps Retrieval Augmentation](https://arxiv.org/abs/2402.11457) *Shiyu Ni et.al.* 18 Feb 2024
+- [ACL 2024 Findings, **Verbalized Confidence**, **Prompting Methods**] [When Do LLMs Need Retrieval Augmentation? Mitigating LLMs' Overconfidence Helps Retrieval Augmentation](https://arxiv.org/abs/2402.11457) *Shiyu Ni et.al.* 18 Feb 2024
 
   > 1)Quantitatively measure LLMs’ such ability and confirm their overconfidence 2) study how LLMs’ certainty about a question correlates with their dependence on external retrieved information 3)Propose several prompting methods to enhance LLMs’ perception of knowledge boundaries and show that they are effective in reducing overconfidence 4) equipped with these methods, LLMs can achieve comparable or even better performance of RA with much fewer retrieval calls.
 
-- [Arxiv, Position paper] [Reliable, Adaptable, and Attributable Language Models with Retrieval](https://arxiv.org/abs/2403.03187) *Akari Asai et.al.* 5 Mar 2024
+- [Arxiv, **Position paper**] [Reliable, Adaptable, and Attributable Language Models with Retrieval](https://arxiv.org/abs/2403.03187) *Akari Asai et.al.* 5 Mar 2024
 
   > Advocate for retrieval-augmented LMs to replace parametric LMs as the next generation of LMs and propose a roadmap for developing general-purpose retrieval-augmented LMs
 
-- [ACL 2024 Oral, **DRAGIN**, Enhanced FLARE] [DRAGIN: Dynamic Retrieval Augmented Generation based on the Information Needs of Large Language Models](https://arxiv.org/pdf/2403.10081) *Weihang Su et.al.* 15 Mar 2024
+- [ACL 2024 Oral, **DRAGIN**, **Enhanced FLARE**] [DRAGIN: Dynamic Retrieval Augmented Generation based on the Information Needs of Large Language Models](https://arxiv.org/pdf/2403.10081) *Weihang Su et.al.* 15 Mar 2024
 
   > Propose Dragin, focusing on 1) when to retrieve: considers the LLM’s uncertainty about its own generated content, the influence of each token on subsequent tokens, and the semantic significance of each token and 2) what to retrieve: construct query using important words by leveraging the LLM’s self-attention across the entire context
 
