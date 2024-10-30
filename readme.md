@@ -54,7 +54,7 @@ These methods require access to the full set of model parameters, such as for mo
 
   > 1)Establishing a precise problem definition and defining “honesty” 2)introduce a flexible training framework which emphasize honesty without sacrificing performance on other tasks
 
-- [:star:NeurIPS Safe Generative AI Workshop 2024, **Semantic Uncertainty**] [Fine-Tuning Large Language Models to Appropriately Abstain with Semantic Entropy](https://arxiv.org/abs/2410.17234) *Benedict Aaron Tjandra et.al.*  22 Oct 2024
+- [​ :star: NeurIPS Safe Generative AI Workshop 2024, **Semantic Uncertainty**] [Fine-Tuning Large Language Models to Appropriately Abstain with Semantic Entropy](https://arxiv.org/abs/2410.17234) *Benedict Aaron Tjandra et.al.*  22 Oct 2024
 
   > Existing methods rely on the existence of ground-truth labels or are limited to short-form responses. This paper proposes fine-tuning using semantic entropy, an uncertainty measure derived from introspection into the model which does not require external labels.
 
@@ -102,7 +102,7 @@ Need to access to the probability of generated tokens. Some methods also rely on
 
   > With appropriate prompts, GPT-3 is more reliable (both consistency-based and prob-based confidence estimation) than smaller-scale supervised models
 
-- [:star:ICLR 2023 Spotlight, **Semantic Uncertainty**, **Token-prob-based Confidence & Self-consistency**] [Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation](https://arxiv.org/abs/2302.09664)  *Lorenz Kuhn et.al.* 19 Feb 2023
+- [​ :star: ICLR 2023 Spotlight, **Semantic Uncertainty**, **Token-prob-based Confidence & Self-consistency**] [Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation](https://arxiv.org/abs/2302.09664)  *Lorenz Kuhn et.al.* 19 Feb 2023
 
   > Introduce semantic entropy—an entropy which incorporates linguistic invariances created by shared meanings
 
@@ -111,7 +111,7 @@ Need to access to the probability of generated tokens. Some methods also rely on
   > Investigate the alignment between LLMs' internal confidence and verbalized confidence
 
 
-- [:star:Nature, **Semantic Uncertainty**] [Detecting hallucinations in large language models using semantic entropy](https://www.nature.com/articles/s41586-024-07421-0) *Sebastian Farquhar et.al.* 19 June 2024
+- [​ :star: Nature, **Semantic Uncertainty**] [Detecting hallucinations in large language models using semantic entropy](https://www.nature.com/articles/s41586-024-07421-0) *Sebastian Farquhar et.al.* 19 June 2024
 
   > The expension of [Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation](https://arxiv.org/abs/2302.09664) 
 
