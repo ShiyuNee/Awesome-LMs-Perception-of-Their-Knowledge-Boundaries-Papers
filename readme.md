@@ -139,6 +139,11 @@ These methods only require access to the model’s text output.
 
   >  Evaluate LLMs’ self-knowledge by assessing their ability to identify unanswerable or unknowable questions
 
+
+- [EACL 2024 Findings, **Self-consistency**] [Do Language Models Know When They’re Hallucinating References](https://arxiv.org/abs/2305.18248) *Ayush Agrawal et.al.* 29 May 2023
+
+  > Focus on hallucinated book and article references due to their frequent and easy-to-discern nature. Identify hallucinated references by asking a set of direct (yes/no questions to directly get the model's confidence) or indirect queries (ask for the authors of the generated reference) to the language model about the references.
+
 - [ICLR 2024, **Self-consistency & Verbalized Confidence**] [Can LLMs Express Their Uncertainty? An Empirical Evaluation of Confidence Elicitation in LLMs](https://arxiv.org/abs/2306.13063) *Miao Xiong et.al.*  22 Jun 2023
 
   > Explore black-box approaches for LLM uncertainty estimation. Define a systematic framework with three components: prompting strategies for eliciting verbalized confidence, sampling methods for generating multiple responses, and aggregation techniques for computing consistency
