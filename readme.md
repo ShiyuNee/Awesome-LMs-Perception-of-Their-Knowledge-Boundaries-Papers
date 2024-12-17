@@ -26,7 +26,9 @@ These papers are surveys or fairly comprehensive foundational studies.
 
 - [Survey] [A Survey on the Honesty of Large Language Models](https://arxiv.org/abs/2409.18786) *Siheng Li et.al.* 27 Sep 2024
 
-  > A survey on the honesty of LLMs, covering its clarification, evaluation approaches, and strategies for improvement
+  > A survey on the honesty of LLMs, covering its clarification, evaluation approaches, and strategies for improvement	
+
+- [Survey] [A Survey on Uncertainty Quantification of Large Language Models: Taxonomy,  Open Research Challenges, and Future Directions](https://arxiv.org/abs/2412.05563) *Ola Shorinwa et.al.* 7 Dec 2024
 
 ### White-box Investigation
 
