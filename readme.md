@@ -30,6 +30,8 @@ These papers are surveys or fairly comprehensive foundational studies.
 
 - [Survey] [A Survey on Uncertainty Quantification of Large Language Models: Taxonomy,  Open Research Challenges, and Future Directions](https://arxiv.org/abs/2412.05563) *Ola Shorinwa et.al.* 7 Dec 2024
 
+- [Survey] [Knowledge Boundary of Large Language Models: A Survey](https://arxiv.org/abs/2412.12472) *Moxin Li et.al.* 17 Dec 2024
+
 ### White-box Investigation
 
 These methods require access to the full set of model parameters, such as for model training or using internal signals of the model.
