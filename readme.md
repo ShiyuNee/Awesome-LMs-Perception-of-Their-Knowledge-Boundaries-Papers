@@ -102,6 +102,11 @@ Need to access to the probability of generated tokens. Some methods also rely on
 
   > Investigate calibration in modern neural networks, propose ECE metric, propose enhance calibration via temperature
 
+
+- [TACL 2022, **Verbalized Confidence**] [Reducing conversational agents’ overconfidence through linguistic calibration](https://aclanthology.org/2022.tacl-1.50/) *Sabrina J. Mielke et.al.* 30 Dec 2020
+
+  > 1.Analyze to what extent SOTA chit-chat models are linguistically calibrated (poorly calibrated); 2.Train a much better correctness predictor directly from the chit-chat model’s representations. 3.Use this trained predictor within a controllable generation model which greatly improves the calibration of a SOTA chit-chat model.
+
 - [ICLR 2023, **Token-prob-based Confidence & Self-consistency**] [Prompting GPT-3 To Be Reliable](https://arxiv.org/abs/2210.09150) *Chenglei Si et.al.* 17 Oct 2022
 
   > With appropriate prompts, GPT-3 is more reliable (both consistency-based and prob-based confidence estimation) than smaller-scale supervised models
