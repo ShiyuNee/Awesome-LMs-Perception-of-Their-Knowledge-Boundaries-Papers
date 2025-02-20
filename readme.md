@@ -165,6 +165,10 @@ These methods only require access to the model’s text output.
 
   >  Engineer novel features and train a (interpretable) model (viz. logistic regression) on these features to estimate the confidence. Design different ways of manipulating the input prompt and produce values based on the variability of the answers for each such manipulation. We aver to these values as features
 
+- [EMNLP 2024] [Calibrating the Confidence of Large Language Models by Eliciting Fidelity](https://arxiv.org/abs/2404.02655) *Mozhi Zhang et.al.* 3 April 2024
+
+  >Decompose the language model's confidence for each choice into Uncertainty about the question and Fidelity to the answer. First, sample multiple times: 1.**Uncertainty**: The distribution of sampled answers. 2.**Fidelity**: Replace the selected answer with "all other options are wrong," then reselect, observing any changes. Repeat to assess fidelity to each answer. Finally, merge the two components.
+
 ## Adaptive RAG
 
 These methods focus directly on the “when to retrieve”, designing strategies and evaluating their effectiveness in Retrieval-Augmented Generation (RAG).
