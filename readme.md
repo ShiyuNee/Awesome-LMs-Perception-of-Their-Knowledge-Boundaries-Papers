@@ -62,6 +62,10 @@ These methods require access to the full set of model parameters, such as for mo
 
   > Existing methods rely on the existence of ground-truth labels or are limited to short-form responses. This paper proposes fine-tuning using semantic entropy, an uncertainty measure derived from introspection into the model which does not require external labels.
 
+- [NAACL 2024, **Verbalized Confidence**] [R-Tuning: Instructing Large Language Models to Say ‘I Don’t Know’](https://arxiv.org/pdf/2311.09677) *Hanning Zhang et.al.* 7 Jun 2024
+
+  > 1) Add certainty tags to QA dataset based on model's answer correctness. 2) train model to express uncertainty when not sure about its answer.
+
 #### Utilizing Internal States or Attention Weights
 
 These papers focus on determining the truth of a statement or the model’s ability to provide a correct answer by analyzing the model’s internal states or attention weights.  It usually involves using mathematical methods to extract features or training a lightweight MLP (Multi-Layer Perceptron).
