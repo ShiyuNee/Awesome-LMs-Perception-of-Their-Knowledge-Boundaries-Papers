@@ -10,16 +10,16 @@ Knowing when LLMs lack knowledge enables them to express "I don't know" and trig
 
 ## Contents
 
-- [LMs' Perception of Their Knowledge Boundaries](#LMs' Perception of Their Knowledge Boundaries)
+- [LMs' Perception of Their Knowledge Boundaries](#lms-perception-of-their-knowledge-boundaries)
 
-  - [Survey or Foundation Papers](#Survey or Foundation Papers)
-  - [White-box Investigation](#White-box Investigation)
-    - [Training The Language Model](#Training The Language Model)
-    - [Utilizing Internal States or Attention Weights](#Utilizing Internal States or Attention Weights)
-  - [Grey-box Investigation](#Grey-box Investigation)
-  - [Black-box Investigation](#Black-box Investigation)
+  - [Survey or Foundation Papers](#survey-or-foundation-papers)
+  - [White-box Investigation](#white-box-investigation)
+    - [Training The Language Model](#training-the-language-model)
+    - [Utilizing Internal States or Attention Weights](#utilizing-internal-states-or-attention-weights)
+  - [Grey-box Investigation](#grey-box-investigation)
+  - [Black-box Investigation](#black-box-investigation)
 
-- [Adaptive RAG](#Adaptive RAG)
+- [Adaptive RAG](#adaptive-rag)
 
   
 
