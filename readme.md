@@ -115,6 +115,10 @@ These papers focus on determining the truth of a statement or the model’s abil
 
   > Studies non-factuality prediction (NFP) before response generation and propose FacLens (train MLP) to enhance efficiency and transferability (across different models, the first in NFP) of NFP
 
+- [Arxiv] [Towards Fully Exploiting LLM Internal States to Enhance Knowledge Boundary Perception](https://www.arxiv.org/abs/2502.11677) *Shiyu Ni et.al.* 17 Feb 2025
+
+  > This work explores leveraging LLMs’ internal states to enhance their perception of knowledge boundaries from efficiency and risk perspectives. It focuses on: 1) The necessity of estimating model confidence after response generation. 2) Introducing Consistency-based Confidence Calibration ($C^3$), which evaluates confidence consistency through question reformulation. $C^3$ significantly improves LLMs’ ability to recognize their knowledge gaps.
+
 ### Grey-box Investigation
 
 Need to access to the probability of generated tokens. Some methods also rely on the probability of generated tokens; however, since training is involved in the paper, they do not fall into this category.
