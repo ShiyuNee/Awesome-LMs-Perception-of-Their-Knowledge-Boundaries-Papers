@@ -1,12 +1,27 @@
-[toc]
 
-# When Do LMs Need Retrieval Augmentation
 
-> A curated list of awesome papers about when do language models (LMs) need retrieval augmentation. This repository will be continuously updated. If I missed any papers, feel free to open a PR to include them! And any feedback and contributions are welcome!
+# Language Models' Perception of Their Knowledge Boundaries 
 
-Trigger retrieval when language model can not provide correct answers. Therefore, many work focuses on **determining whether the model can provide a correct answer.**
+> A curated list of awesome papers about LMs' perception of their knowledge boundaries.  This repository will be continuously updated. If I missed any papers, feel free to open a PR to include them! And any feedback and contributions are welcome!
+
+Knowing when LLMs lack knowledge enables them to express "I don't know" and trigger retrieval when they cannot provide correct answers. Consequently, much research focuses on **LLMs' perception of their knowledge boundaries—that is, whether they recognize what they know and what they don't.**
 
 > :star: represents the same series of papers
+
+## Contents
+
+- [LMs' Perception of Their Knowledge Boundaries](#LMs' Perception of Their Knowledge Boundaries)
+
+  - [Survey or Foundation Papers](#Survey or Foundation Papers)
+  - [White-box Investigation](#White-box Investigation)
+    - [Training The Language Model](#Training The Language Model)
+    - [Utilizing Internal States or Attention Weights](#Utilizing Internal States or Attention Weights)
+  - [Grey-box Investigation](#Grey-box Investigation)
+  - [Black-box Investigation](#Black-box Investigation)
+
+- [Adaptive RAG](#Adaptive RAG)
+
+  
 
 ## LMs' Perception of Their Knowledge Boundaries
 
@@ -31,6 +46,8 @@ These papers are surveys or fairly comprehensive foundational studies.
 - [Survey] [A Survey on Uncertainty Quantification of Large Language Models: Taxonomy,  Open Research Challenges, and Future Directions](https://arxiv.org/abs/2412.05563) *Ola Shorinwa et.al.* 7 Dec 2024
 
 - [Survey] [Knowledge Boundary of Large Language Models: A Survey](https://arxiv.org/abs/2412.12472) *Moxin Li et.al.* 17 Dec 2024
+
+- [Survey] [A Survey of Uncertainty Estimation Methods on Large Language Models](https://arxiv.org/pdf/2503.00172) *Zhiqiu Xia et.al.* 28 Feb 2025
 
 ### White-box Investigation
 
