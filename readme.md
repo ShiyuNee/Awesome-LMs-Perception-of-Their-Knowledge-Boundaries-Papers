@@ -230,6 +230,10 @@ These methods focus directly on the “when to retrieve”, designing strategies
 
   > Propose Dragin, focusing on 1) when to retrieve: considers the LLM’s uncertainty about its own generated content, the influence of each token on subsequent tokens, and the semantic significance of each token and 2) what to retrieve: construct query using important words by leveraging the LLM’s self-attention across the entire context
 
+- [Arxiv, **CtrlA**] [CtrlA: Adaptive Retrieval-Augmented Generation via Inherent Control](https://arxiv.org/abs/2405.18727) *Huanshuo Liu et.al.* 29 May 2024
+
+  > This paper leverages the model's internal states to derive directions for honesty (where the output aligns with internal knowledge) and confidence. It enhances honesty by modifying internal representations and uses the confidence signal to detect retrieval timing.
+
 - [EMNLP 2024 Findings, **UAR**] [Unified Active Retrieval for Retrieval Augmented Generation](https://arxiv.org/abs/2406.12534) *Qinyuan Cheng et.al.* 18 Jun 2024 
 
   > Propose Unified Active Retrieval (UAR)，consists of four orthogonal criteria for determining the retrieval timing: Intent-aware; Knowledge-aware; Time-Sensitive-aware; Selfa-aware
@@ -238,7 +242,8 @@ These methods focus directly on the “when to retrieve”, designing strategies
 
   > Use hidden states of the last generated tokens to meauser LLMs' uncertainty and use this uncertainty to decide: when to retrieve, re-rank the retrieved documents, choose the reasoning strategy
 
-  
+
+
 
 
 
