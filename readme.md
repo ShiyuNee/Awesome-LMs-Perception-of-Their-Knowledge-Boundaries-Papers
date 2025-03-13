@@ -81,7 +81,10 @@ These methods require access to the full set of model parameters, such as for mo
 
 - [NAACL 2024, **Verbalized Confidence**, **Outstanding Paper Award**] [R-Tuning: Instructing Large Language Models to Say ‘I Don’t Know’](https://arxiv.org/pdf/2311.09677) *Hanning Zhang et.al.* 7 Jun 2024
 
-  > 1)Add certainty tags to QA dataset based on model's answer correctness. 2)Train the model to express uncertainty when not sure about its answer.
+  > Proposeing a supervised finetuning and an unsupervised finetuning method:
+  > 1)supervised:Add certainty tags to QA dataset based on model's answer correctness. Train the model to express uncertainty when not sure about its answer.
+  > 2)unsupervised:Firstly, generate answer multiple times, and calculate entropy based on answer frequency(similar to semantic entropy but didn't use a NLI model).Secondly, separate high entropy data to 'uncertain' set and low entropy data to 'certain' set and finetune model.
+  > Interestingly, unsupervised learning can improve both accuracy and calibration.
 
 #### Utilizing Internal States or Attention Weights
 
