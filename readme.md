@@ -249,6 +249,10 @@ These methods focus directly on the “when to retrieve”, designing strategies
 
   > Use hidden states of the last generated tokens to meauser LLMs' uncertainty and use this uncertainty to decide: when to retrieve, re-rank the retrieved documents, choose the reasoning strategy
 
+- [Arxiv, **Comprehensive study**] [Adaptive Retrieval Without Self-Knowledge? Bringing Uncertainty Back Home](https://arxiv.org/abs/2501.12835) *Viktor Moskvoretskii et.al.* 22 Jan 2025
+
+  >Conduct a comprehensive analysis of 35 adaptive retrieval methods, including 8 recent approaches and 27 uncertainty estimation techniques, across 6 datasets using 10 metrics for QA performance, self-knowledge, and efficiency.
+
 
 
 
