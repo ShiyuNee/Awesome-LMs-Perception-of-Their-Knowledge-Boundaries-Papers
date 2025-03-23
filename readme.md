@@ -209,6 +209,12 @@ These methods focus directly on the “when to retrieve”, designing strategies
 
   > Investigate 1) when we should and should not rely on LMs’ parametric knowledge and 2) how scaling and non-parametric memories (e.g., retrievalaugmented LMs) can help. Propose adaptive RAG based on entity popularity
 
+
+- [ACL 2023, **IRCoT**] [Interleaving Retrieval with Chain-of-Thought Reasoning for Knowledge-Intensive Multi-Step Questions](https://arxiv.org/abs/2212.10509) *Harsh Trivedi et.al.*
+
+  >Propose IRCoT which uses retrieval to guide the chain-of-thought (CoT) reasoning steps and uses CoT reasoning to guide the
+  >retrieval. IRCoT alternates between the two steps: extend CoT & expand retrieved information 
+
 - [EMNLP 2023, **FLARE**] [Active Retrieval Augmented Generation](https://arxiv.org/abs/2305.06983) *Zhengbao Jiang et.al.* 11 May 2023
 
   > Propose FLARE for long-form generation: Iteratively uses a prediction of the upcoming sentence to anticipate future content, which is then utilized as a query to retrieve relevant documents to regenerate the sentence if it contains low-confidence tokens
