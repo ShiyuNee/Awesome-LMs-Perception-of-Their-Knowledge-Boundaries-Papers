@@ -10,16 +10,16 @@ Knowing when LLMs lack knowledge enables them to express "I don't know" and trig
 
 ## Contents
 
-- [LMs' Perception of Their Knowledge Boundaries](#lms-perception-of-their-knowledge-boundaries)
-
-  - [Survey or Foundation Papers](#survey-or-foundation-papers)
-  - [White-box Investigation](#white-box-investigation)
-    - [Training The Language Model](#training-the-language-model)
-    - [Utilizing Internal States or Attention Weights](#utilizing-internal-states-or-attention-weights)
-  - [Grey-box Investigation](#grey-box-investigation)
-  - [Black-box Investigation](#black-box-investigation)
-
-- [Adaptive RAG](#adaptive-rag)
+- [Language Models' Perception of Their Knowledge Boundaries](#language-models-perception-of-their-knowledge-boundaries)
+  - [Contents](#contents)
+  - [LMs' Perception of Their Knowledge Boundaries](#lms-perception-of-their-knowledge-boundaries)
+    - [Survey or Foundation Papers](#survey-or-foundation-papers)
+    - [White-box Investigation](#white-box-investigation)
+      - [Training The Language Model](#training-the-language-model)
+      - [Utilizing Internal States or Attention Weights](#utilizing-internal-states-or-attention-weights)
+    - [Grey-box Investigation](#grey-box-investigation)
+    - [Black-box Investigation](#black-box-investigation)
+  - [Adaptive RAG](#adaptive-rag)
 
   
 
@@ -75,9 +75,7 @@ These methods require access to the full set of model parameters, such as for mo
 
   > 1)Establishing a precise problem definition and defining “honesty” 2)introduce a flexible training framework which emphasize honesty without sacrificing performance on other tasks
 
-- [​ :star: NeurIPS Safe Generative AI Workshop 2024, **Semantic Uncertainty**] [Fine-Tuning Large Language Models to Appropriately Abstain with Semantic Entropy](https://arxiv.org/abs/2410.17234) *Benedict Aaron Tjandra et.al.*  22 Oct 2024
-
-  > Existing methods rely on the existence of ground-truth labels or are limited to short-form responses. This paper proposes fine-tuning using semantic entropy, an uncertainty measure derived from introspection into the model which does not require external labels.
+- [ACL 2024, **Verbalized Confidence & RL**] [When to Trust LLMs: Aligning Confidence with Response Quality](https://arxiv.org/abs/2404.17287) *Shuchang Tao et.al.* 26 Apr 2024
 
 - [NAACL 2024, **Verbalized Confidence**, **Outstanding Paper Award**] [R-Tuning: Instructing Large Language Models to Say ‘I Don’t Know’](https://arxiv.org/pdf/2311.09677) *Hanning Zhang et.al.* 7 Jun 2024
 
@@ -85,6 +83,11 @@ These methods require access to the full set of model parameters, such as for mo
   > 1)supervised:Add certainty tags to QA dataset based on model's answer correctness. Train the model to express uncertainty when not sure about its answer.
   > 2)unsupervised:Firstly, generate answer multiple times, and calculate entropy based on answer frequency(similar to semantic entropy but didn't use a NLI model).Secondly, separate high entropy data to 'uncertain' set and low entropy data to 'certain' set and finetune model.
   > Interestingly, unsupervised learning can improve both accuracy and calibration.
+
+- [​ :star: NeurIPS Safe Generative AI Workshop 2024, **Semantic Uncertainty**] [Fine-Tuning Large Language Models to Appropriately Abstain with Semantic Entropy](https://arxiv.org/abs/2410.17234) *Benedict Aaron Tjandra et.al.*  22 Oct 2024
+
+  > Existing methods rely on the existence of ground-truth labels or are limited to short-form responses. This paper proposes fine-tuning using semantic entropy, an uncertainty measure derived from introspection into the model which does not require external labels.
+
 
 #### Utilizing Internal States or Attention Weights
 
@@ -121,6 +124,8 @@ These papers focus on determining the truth of a statement or the model’s abil
 - [Arxiv] [Towards Fully Exploiting LLM Internal States to Enhance Knowledge Boundary Perception](https://www.arxiv.org/abs/2502.11677) *Shiyu Ni et.al.* 17 Feb 2025
 
   > This work explores leveraging LLMs’ internal states to enhance their perception of knowledge boundaries from efficiency and risk perspectives. It focuses on: 1) The necessity of estimating model confidence after response generation. 2) Introducing Consistency-based Confidence Calibration ($C^3$), which evaluates confidence consistency through question reformulation. $C^3$ significantly improves LLMs’ ability to recognize their knowledge gaps.
+
+- [Arxiv] [Analyzing LLMs’ Knowledge Boundary Cognition Across Languages Through the Lens of Internal Representations](https://arxiv.org/pdf/2504.13816) *Chenghao Xiao et.al.* 18 Apr 2025
 
 ### Grey-box Investigation
 
@@ -200,6 +205,10 @@ These methods only require access to the model’s text output.
 - [EMNLP 2024] [Calibrating the Confidence of Large Language Models by Eliciting Fidelity](https://arxiv.org/abs/2404.02655) *Mozhi Zhang et.al.* 3 April 2024
 
   >Decompose the language model's confidence for each choice into Uncertainty about the question and Fidelity to the answer. First, sample multiple times: 1.**Uncertainty**: The distribution of sampled answers. 2.**Fidelity**: Replace the selected answer with "all other options are wrong," then reselect, observing any changes. Repeat to assess fidelity to each answer. Finally, merge the two components.
+
+- [Arxiv, **Verbalized Confidence**] [Uncertainty Distillation: Teaching Language Models to Express Semantic Confidence](https://arxiv.org/abs/2503.14749) *Sophia Hager et.al.* 18 March 2025
+  
+- [AAAI 2025, **Self-consistency**] [Explore What LLM Does Not Know in Complex Question Answering](https://ojs.aaai.org/index.php/AAAI/article/view/34638) *Xin Lin et.al.* 11 April 2025
 
 ## Adaptive RAG
 
