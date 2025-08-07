@@ -31,6 +31,8 @@ These methods focus on determining whether the model can provide a correct answe
 
 These papers are surveys or fairly comprehensive foundational studies.
 
+- [Machine Learning 2021] [Aleatoric and Epistemic Uncertainty in Machine Learning: An Introduction to Concepts and Methods](https://arxiv.org/abs/1910.09457) *Eyke H ̈ullermeier et.al.* 21 Oct 2019
+
 - [Anthropic] [Language Models (Mostly) Know What They Know](https://arxiv.org/abs/2207.05221) *Saurav Kadavath et.al.* 11 Jul 2022
 
   > Study whether language models can evaluate the validity of their own claims and predict which questions they will be able to answer correctly
@@ -49,11 +51,21 @@ These papers are surveys or fairly comprehensive foundational studies.
 
 - [Survey] [A Survey of Uncertainty Estimation Methods on Large Language Models](https://arxiv.org/pdf/2503.00172) *Zhiqiu Xia et.al.* 28 Feb 2025
 
+- [Tutorial] [Uncertainty Quantification for Large Language Models](https://aclanthology.org/2025.acl-tutorials.3/) *Artem Shelmanov et.al.* 27 July 2025
+
 ### White-box Investigation
 
 These methods require access to the full set of model parameters, such as for model training or using internal signals of the model.
 
 #### Training The Language Model
+
+- [NeurIPS 2017] [Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles](https://arxiv.org/pdf/1612.01474) *Balaji Lakshminarayanan et.al.* 5 Dec 2016
+
+  > Shows ensembles can be used not only for prediction but also for uncertainty estimation.
+
+- [ICLR 2021] [Uncertainty Estimation in Autoregressive Structured Prediction](https://arxiv.org/abs/2002.07650) *Andrey Malinin et.al.* 18 Feb 2020
+
+  > Shows how to use ensembles for UQ of generative LMs.
 
 - [EMNLP 2020, **Token-prob-based Confidence**] [Calibration of Pre-trained Transformers](https://arxiv.org/pdf/2003.07892) *Shrey Desai et.al.* 17 Mar 2020
 
@@ -148,6 +160,14 @@ Need to access to the probability of generated tokens. Some methods also rely on
 
   > Introduce semantic entropy—an entropy which incorporates linguistic invariances created by shared meanings
 
+- [ACL 2024] [Shifting Attention to Relevance: Towards the Predictive Uncertainty Quantification of Free-Form Large Language Models](https://arxiv.org/abs/2307.01379) *Jinhao Duan et.al.* 3 Jul 2023
+
+  > Assigns token weights as the self-NLI score when token is removed.
+  
+- [ACL 2024] [Fact-Checking the Output of Large Language Models via Token-Level Uncertainty Quantification](https://arxiv.org/abs/2403.04696) *Ekaterina Fadeeva et.al.* 7 Mar 2024
+
+  > The first to investigate the quality of claim-level UQ techniques for LLM generation which approaches it by leveraging token-level uncertainty scores and aggregating them into claim-level scores. They propose CCP which considers uncertainty of expression and claim type/order uncertainty.
+  
 - [ACL 2024, **Token-prob-based & Verbalized Confidence**] [Confidence Under the Hood: An Investigation into the Confidence-Probability Alignment in Large Language Models](https://arxiv.org/abs/2405.16282) *Abhishek Kumar et.al.* 25 May 2024
 
   > Investigate the alignment between LLMs' internal confidence and verbalized confidence
@@ -161,9 +181,16 @@ Need to access to the probability of generated tokens. Some methods also rely on
 
   > Conduct a comprehensive analysis and comparison of LLMs’ probabilistic perception and verbalized perception of their factual knowledge boundaries
 
+- [Arxiv **Token-prob-based** & **Self-consistency**] [Uncertainty Quantification for LLMs through Minimum Bayes Risk: Bridging Confidence and Consistency](https://arxiv.org/abs/2502.04964) *Roman Vashurin et.al.* 7 Feb 2025
+- [ICLR 2025] [From Risk to Uncertainty: Generating Predictive Uncertainty Measures via Bayesian Estimation](https://arxiv.org/abs/2402.10727) *Nikita Kotelevskii et.al.* 16 Feb 2024
+
 ### Black-box Investigation
 
 These methods only require access to the model’s text output. 
+
+- [TACL 2020, **Self-consistency**] [Unsupervised Quality Estimation for Neural Machine Translation](https://arxiv.org/abs/2005.10608) *Marina Fomicheva et.al.* 21 May 2020
+
+  > Compare samples via lexical metrics.
 
 - [EMNLP 2023, **Selfcheckgpt**, **Self-consistency**] [Selfcheckgpt: Zero-resource black-box hallucination detection for generative large language models](https://arxiv.org/abs/2303.08896) *Potsawee Manakul et.al.* 15 Mar 2023
 
@@ -184,7 +211,7 @@ These methods only require access to the model’s text output.
 
 - [TMLR 2024, **Self-consistency**] [Generating with Confidence: Uncertainty Quantification for Black-box Large Language Models](https://arxiv.org/abs/2305.19187) *Zhen Lin et.al.* 30 May 2023
 
-  >They explored UQ methods for black-box models in the NLG task and proposed a series of methods to evaluate the models' uncertainty regarding inputs and confidence in each generated sequence, primarily based on the similarity of multiple generations.
+  >They explored UQ methods for black-box models in the NLG task and proposed a series of methods (e.g., compute similarity as a graph, with sampled sequences are nodes and pairwise similarities are edges) to evaluate the models' uncertainty regarding inputs and confidence in each generated sequence, primarily based on the similarity of multiple generations.
 
 - [EACL 2024 Findings, **Self-consistency**] [Do Language Models Know When They’re Hallucinating References](https://arxiv.org/abs/2305.18248) *Ayush Agrawal et.al.* 29 May 2023
 
@@ -197,6 +224,14 @@ These methods only require access to the model’s text output.
 - [EMNLP 2023, **SAC3**, **Self-consistency & Multi-LLM Collaboration**] [SAC3: Reliable Hallucination Detection in Black-Box Language Models via Semantic-aware Cross-check Consistency](https://arxiv.org/abs/2311.01740) *Jiaxin Zhang et.al.* 3 Nov 2023 
 
   > Extend self-consistency across pertubed questions and different models
+
+- [ICML 2024, **Self-consistency**] [Language Models with Conformal Factuality Guarantees](https://arxiv.org/abs/2402.10978) *Christopher Mohri et.al.* 15 Feb 2024
+
+  > Propose FrequencyScoring which estimates the confidence of a generation by analyzing its support in other generation. Originally proposed for claim-level, with prompted GPT-4 serving as NLI model.
+
+- [NeurIPS 2024] [Semantic Density: Uncertainty Quantification for Large Language Models through Confidence Measurement in Semantic Space](https://arxiv.org/abs/2405.13845) *Xin Qiu et.al.* 22 May 2024 
+
+  > Compute similarity via semantic density.
 
 - [Arxiv] [Large Language Model Confidence Estimation via Black-Box Access](https://arxiv.org/abs/2406.04370) *Tejaswini Pedapati et.al.* 1 Jun 2024
 
