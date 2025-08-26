@@ -19,6 +19,7 @@ Knowing when LLMs lack knowledge enables them to express "I don't know" and trig
     - [Black-box Investigation](#black-box-investigation)
   - [Adaptive RAG](#adaptive-rag)
 
+- [Reasoning Models' Perception of Their Knowledge Boundaries](#reasoning-models'-perception-of-their-knowledge-boundaries)
 
 ## LMs' Perception of Their Knowledge Boundaries
 
