@@ -183,6 +183,10 @@ Need to access to the probability of generated tokens. Some methods also rely on
 
 - [ICLR 2025] [From Risk to Uncertainty: Generating Predictive Uncertainty Measures via Bayesian Estimation](https://arxiv.org/abs/2402.10727) *Nikita Kotelevskii et.al.* 16 Feb 2024
 
+- [Arxiv] [Human-Alignment and Calibration of Inference-Time Uncertainty in Large Language Models](https://arxiv.org/pdf/2508.08204) *Kyle Moore et.al.* 11 Aug 2025
+
+  > Evaluate how closely model uncertainty aligns to human uncertainty. (strong alignment to human uncertainty)
+
 - [Arxiv] [Semantic Energy: Detecting LLM Hallucination Beyond Entropy](https://arxiv.org/abs/2508.14496) *Huan Ma et.al.* 20 Aug 2025.
 
   > This paper introduces **Semantic Energy**, an energy-based uncertainty measure derived from the final-layer logits (before softmax) of language models. By combining semantic clustering with a Boltzmann-style energy formulation, it overcomes the limitations of **Semantic Entropy** in low-diversity settings and significantly improves hallucination detection in LLMs.
@@ -247,6 +251,8 @@ These methods only require access to the model’s text output.
 - [Arxiv, **Verbalized Confidence**] [Uncertainty Distillation: Teaching Language Models to Express Semantic Confidence](https://arxiv.org/abs/2503.14749) *Sophia Hager et.al.* 18 March 2025
   
 - [AAAI 2025, **Self-consistency**] [Explore What LLM Does Not Know in Complex Question Answering](https://ojs.aaai.org/index.php/AAAI/article/view/34638) *Xin Lin et.al.* 11 April 2025
+
+- [Arxiv, Self-consistency] [Zero-knowledge LLM hallucination detection and mitigation through fine-grained cross-model consistency](https://arxiv.org/abs/2508.14314) *Aman Goel et.al.* 19 Aug 2025
 
 ## Adaptive RAG
 
