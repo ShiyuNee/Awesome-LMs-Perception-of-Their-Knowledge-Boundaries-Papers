@@ -180,7 +180,12 @@ Need to access to the probability of generated tokens. Some methods also rely on
   > Conduct a comprehensive analysis and comparison of LLMs’ probabilistic perception and verbalized perception of their factual knowledge boundaries
 
 - [Arxiv **Token-prob-based** & **Self-consistency**] [Uncertainty Quantification for LLMs through Minimum Bayes Risk: Bridging Confidence and Consistency](https://arxiv.org/abs/2502.04964) *Roman Vashurin et.al.* 7 Feb 2025
+
 - [ICLR 2025] [From Risk to Uncertainty: Generating Predictive Uncertainty Measures via Bayesian Estimation](https://arxiv.org/abs/2402.10727) *Nikita Kotelevskii et.al.* 16 Feb 2024
+
+- [Arxiv] [Semantic Energy: Detecting LLM Hallucination Beyond Entropy](https://arxiv.org/abs/2508.14496) *Huan Ma et.al.* 20 Aug 2025.
+
+  > This paper introduces **Semantic Energy**, an energy-based uncertainty measure derived from the final-layer logits (before softmax) of language models. By combining semantic clustering with a Boltzmann-style energy formulation, it overcomes the limitations of **Semantic Entropy** in low-diversity settings and significantly improves hallucination detection in LLMs.
 
 ### Black-box Investigation
 
