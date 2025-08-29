@@ -307,4 +307,5 @@ These methods focus directly on the “when to retrieve”, designing strategies
 - [Arxiv] [Thinking Out Loud: Do Reasoning Models Know When They're Right?](https://arxiv.org/abs/2504.06564) *Qingcheng Zeng et.al.* 9 Apr 2025
 - [Arxiv] [Reasoning about Uncertainty: Do Reasoning Models Know When They Don't Know?](https://arxiv.org/abs/2506.18183) *Zhiting Mei et.al.* 22 Jun 2025
 - [Arxiv] [Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty](https://www.arxiv.org/abs/2507.16806) *Mehul Damani et.al.* 22 Jul 2025
+- [Arxiv] [Deep Think with Confidence](https://arxiv.org/abs/2508.15260) *Yichao Fu et.al.* 21 Aug 2025
 
