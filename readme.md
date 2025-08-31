@@ -19,7 +19,9 @@ Knowing when LLMs lack knowledge enables them to express "I don't know" and trig
     - [Black-box Investigation](#black-box-investigation)
   - [Adaptive RAG](#adaptive-rag)
 
-- [Reasoning Models' Perception of Their Knowledge Boundaries](#reasoning-models'-perception-of-their-knowledge-boundaries)
+- [Reasoning Models' Perception of Their Knowledge Boundaries](#reasoning-models-perception-of-their-knowledge-boundaries)
+
+- [Applications of Confidence](#applications-of-confidence)
 
 ## LMs' Perception of Their Knowledge Boundaries
 
@@ -97,6 +99,8 @@ These methods require access to the full set of model parameters, such as for mo
 - [​ :star: NeurIPS Safe Generative AI Workshop 2024, **Semantic Uncertainty**] [Fine-Tuning Large Language Models to Appropriately Abstain with Semantic Entropy](https://arxiv.org/abs/2410.17234) *Benedict Aaron Tjandra et.al.*  22 Oct 2024
 
   > Existing methods rely on the existence of ground-truth labels or are limited to short-form responses. This paper proposes fine-tuning using semantic entropy, an uncertainty measure derived from introspection into the model which does not require external labels.
+
+- [Arixv] [ConfTuner: Training Large Language Models to Express Their Confidence Verbally](https://arxiv.org/pdf/2508.18847) *Yibo Li et.al.* 26 Aug 2025
 
 
 #### Utilizing Internal States or Attention Weights
@@ -319,5 +323,10 @@ These methods focus directly on the “when to retrieve”, designing strategies
 - [EMNLP 2025] [The Hallucination Tax of Reinforcement Finetuning](https://arxiv.org/pdf/2505.13988) *Linxin Song et.al.* 20 May 2025
 - [Arxiv] [Reasoning about Uncertainty: Do Reasoning Models Know When They Don't Know?](https://arxiv.org/abs/2506.18183) *Zhiting Mei et.al.* 22 Jun 2025
 - [Arxiv] [Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty](https://www.arxiv.org/abs/2507.16806) *Mehul Damani et.al.* 22 Jul 2025
+
+## Applications of Confidence
+
+- [Arxiv] [Confidence Estimation for Text-to-SQL in Large Language Models](https://arxiv.org/abs/2508.14056) *Sepideh Entezari Maleki et.al.* 8 Aug 2025
 - [Arxiv] [Deep Think with Confidence](https://arxiv.org/abs/2508.15260) *Yichao Fu et.al.* 21 Aug 2025
+- [EMNLP 2025] [CoCoA: Confidence and Context-Aware Adaptive Decoding for Resolving Knowledge Conflicts in Large Language Models](https://arxiv.org/abs/2508.17670) *Anant Khandelwal et.al.* 25 Aug 2025
 
