@@ -316,6 +316,7 @@ These methods focus directly on the “when to retrieve”, designing strategies
 
 - [Arxiv] [Reasoning Models Know When They're Right: Probing Hidden States for Self-Verification](https://arxiv.org/abs/2504.05419) *Anqi Zhang et.al.* 7 April 2025
 - [Arxiv] [Thinking Out Loud: Do Reasoning Models Know When They're Right?](https://arxiv.org/abs/2504.06564) *Qingcheng Zeng et.al.* 9 Apr 2025
+- [EMNLP 2025] [The Hallucination Tax of Reinforcement Finetuning](https://arxiv.org/pdf/2505.13988) *Linxin Song et.al.* 20 May 2025
 - [Arxiv] [Reasoning about Uncertainty: Do Reasoning Models Know When They Don't Know?](https://arxiv.org/abs/2506.18183) *Zhiting Mei et.al.* 22 Jun 2025
 - [Arxiv] [Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty](https://www.arxiv.org/abs/2507.16806) *Mehul Damani et.al.* 22 Jul 2025
 - [Arxiv] [Deep Think with Confidence](https://arxiv.org/abs/2508.15260) *Yichao Fu et.al.* 21 Aug 2025
