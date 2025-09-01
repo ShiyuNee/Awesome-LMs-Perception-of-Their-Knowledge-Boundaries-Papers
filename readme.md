@@ -262,6 +262,8 @@ These methods only require access to the model’s text output.
 
 These methods focus directly on the “when to retrieve”, designing strategies and evaluating their effectiveness in Retrieval-Augmented Generation (RAG).
 
+- [ICLR 2023, ReAct] [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) *Shunyu yao et.al.* 6 Oct 2022
+
 - [ACL 2023 Oral, **Adaptive RAG**] [When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories (Adaptive RAG)](https://arxiv.org/abs/2212.10511) *Alex Mallen et.al.* 20 Dec 2022
 
   > Investigate 1) when we should and should not rely on LMs’ parametric knowledge and 2) how scaling and non-parametric memories (e.g., retrievalaugmented LMs) can help. Propose adaptive RAG based on entity popularity
@@ -315,6 +317,14 @@ These methods focus directly on the “when to retrieve”, designing strategies
 - [Arxiv, **Comprehensive study**] [Adaptive Retrieval Without Self-Knowledge? Bringing Uncertainty Back Home](https://arxiv.org/abs/2501.12835) *Viktor Moskvoretskii et.al.* 22 Jan 2025
 
   >Conduct a comprehensive analysis of 35 adaptive retrieval methods, including 8 recent approaches and 27 uncertainty estimation techniques, across 6 datasets using 10 metrics for QA performance, self-knowledge, and efficiency.
+
+- [Arxiv, Search-o1] [Search-o1: Agentic Search-Enhanced Large Reasoning Models](https://arxiv.org/abs/2501.05366) *Xiaoxi Li et.al.* 9 Jan 2025
+
+  > Propose **Search-o1**, which equips reasoning models with retrieval capabilities and consists of two parts: (1) Prompting model that generates `<special_token>query<special_token>` whenever retrieval is needed; (2) **Reason-in-Documents**, which analyzes retrieved documents, refines them, and injects the distilled content into the chain of reasoning—effectively reducing noise and preserving reasoning fluency to avoid disrupting coherence.
+
+- [Arxiv, Search-R1] [Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning](https://arxiv.org/abs/2503.09516) *Bowen Jin et.al.* 12 Mar 2025
+
+  > Propose **Search-R1**, the first framework that incorporates a search engine as part of the environment in reinforcement learning. The main workflow of Search-R1 is to train large language models (LLMs) via reinforcement learning to autonomously generate search queries (triggered with `<search>`), dynamically integrate retrieved results (embedded with `<information>`), and carry out multi-round interleaved “think–retrieve–reason” iterations, ultimately producing the final answer.
 
 ## Reasoning Models' Perception of Their Knowledge Boundaries
 
