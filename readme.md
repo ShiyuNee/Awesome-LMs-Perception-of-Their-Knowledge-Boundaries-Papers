@@ -102,6 +102,10 @@ These methods require access to the full set of model parameters, such as for mo
 
 - [Arixv] [ConfTuner: Training Large Language Models to Express Their Confidence Verbally](https://arxiv.org/pdf/2508.18847) *Yibo Li et.al.* 26 Aug 2025
 
+- [Arxiv] [Teaching Language Models to Faithfully Express their Uncertainty](Teaching Language Models to Faithfully Express their Uncertainty) *Bryan Eikema et.al.* 14 October 2025
+
+  > The model is enabled to verbalize internal uncertainty on a specific claim through SFT. The uncertainty regarding specific claims is measured by the consistency across multiple generations.
+
 
 #### Utilizing Internal States or Attention Weights
 
@@ -256,6 +260,14 @@ These methods only require access to the model’s text output.
   
 - [AAAI 2025, **Self-consistency**] [Explore What LLM Does Not Know in Complex Question Answering](https://ojs.aaai.org/index.php/AAAI/article/view/34638) *Xin Lin et.al.* 11 April 2025
 
+- [EMNLP 2024] [Can Large Language Models Faithfully Express Their Intrinsic Uncertainty in Words?](https://arxiv.org/abs/2405.16908) *Gal Yona et.al.* 27 May 2024
+
+  > This study investigates whether models can express their internal uncertainty through language and finds that models typically produce answers in highly certain linguistic forms, even when their internal consistency (confidence) is low.
+
+- [EMNLP 2025] [MetaFaith: Faithful Natural Language Uncertainty Expression in LLMs](https://arxiv.org/abs/2505.24858) *Gabrielle Kaili-May Liu et.al.* 2 Oct 2025
+
+  > The first to define and evaluate faithful calibration at scale from the perspective of linguistic expression, revealing that LLMs are often internally uncertain yet linguistically overconfident. Propose MetaFaith, a prompting framework that introduces three metacognitive strategies for generating calibration prompts: M+Reflect (reflective self-checking), MetSens (uncertainty-sensitive persona prompting), and MetSens+Hedge (linguistic uncertainty expression).
+
 - [Arxiv, Self-consistency] [Zero-knowledge LLM hallucination detection and mitigation through fine-grained cross-model consistency](https://arxiv.org/abs/2508.14314) *Aman Goel et.al.* 19 Aug 2025
 
 ## Adaptive RAG
@@ -325,6 +337,8 @@ These methods focus directly on the “when to retrieve”, designing strategies
 - [Arxiv, Search-R1] [Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning](https://arxiv.org/abs/2503.09516) *Bowen Jin et.al.* 12 Mar 2025
 
   > Propose **Search-R1**, the first framework that incorporates a search engine as part of the environment in reinforcement learning. The main workflow of Search-R1 is to train large language models (LLMs) via reinforcement learning to autonomously generate search queries (triggered with `<search>`), dynamically integrate retrieved results (embedded with `<information>`), and carry out multi-round interleaved “think–retrieve–reason” iterations, ultimately producing the final answer.
+
+- [EMNLP 2025] [Search Wisely: Mitigating Sub-optimal Agentic Searches By Reducing Uncertainty](https://arxiv.org/pdf/2505.17281) *Peilin Wu et.al.* 9 Oct 2025
 
 ## Reasoning Models' Perception of Their Knowledge Boundaries
 
