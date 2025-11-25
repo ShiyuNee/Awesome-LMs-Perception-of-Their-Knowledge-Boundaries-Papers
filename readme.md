@@ -106,6 +106,10 @@ These methods require access to the full set of model parameters, such as for mo
 
   > The model is enabled to verbalize internal uncertainty on a specific claim through SFT. The uncertainty regarding specific claims is measured by the consistency across multiple generations.
 
+- [Arxiv] [CritiCal: Can Critique Help LLM Uncertainty or Confidence Calibration?](https://arxiv.org/abs/2510.24505) *Qing Zong et.al.* 28 October 2025
+
+  > When teaching the model to output verbalized confidence, **critique-based learning is introduced**. Attempts were made to generate training data either via the model’s own self-critique or using a teacher model (GPT-4o). **Input: question + answer + confidence; Output: Critic**. SFT and DPO training are attempted, demonstrating that critique-based learning yields more reliable confidence calibration
+
 
 #### Utilizing Internal States or Attention Weights
 
@@ -122,6 +126,11 @@ These papers focus on determining the truth of a statement or the model’s abil
 - [EMNLP 2023] [The Curious Case of Hallucinatory (Un)answerability: Finding Truths in the Hidden States of Over-Confident Large Language Models](https://arxiv.org/abs/2310.11877) *Aviv Slobodkin* et.al. 18 Oct 2023
 
   >Investigate whether models already represent questions’ (un)answerablility when producing answers (Yes)
+
+
+- [ICML 2024] [Thermometer: Towards Universal Calibration for Large Language Models](https://arxiv.org/abs/2403.08819) *Maohao Shen et.al.* 20 Feb 2024
+
+  > An MLP is used to predict an appropriate temperature for each task, performing **temperature scaling.** It requires training on the training set and relies on ground-truth answers.
 
 - [ICLR 2024] [INSIDE: LLMs’ internal states retain the power of hallucination detection](https://arxiv.org/abs/2402.03744) *Chao Chen et.al.* 6 Feb 2024
 
@@ -144,6 +153,12 @@ These papers focus on determining the truth of a statement or the model’s abil
   > This work explores leveraging LLMs’ internal states to enhance their perception of knowledge boundaries from efficiency and risk perspectives. It focuses on: 1) The necessity of estimating model confidence after response generation. 2) Introducing Consistency-based Confidence Calibration ($C^3$), which evaluates confidence consistency through question reformulation. $C^3$ significantly improves LLMs’ ability to recognize their knowledge gaps.
 
 - [Arxiv] [Analyzing LLMs’ Knowledge Boundary Cognition Across Languages Through the Lens of Internal Representations](https://arxiv.org/pdf/2504.13816) *Chenghao Xiao et.al.* 18 Apr 2025
+
+- [EMNLP 2025] [Simple Factuality Probes Detect Hallucinations in Long-Form Natural Language Generation](https://aclanthology.org/2025.findings-emnlp.880.pdf) *Jiatong Han et.al.* 
+
+  > In the model’s **long-form generation**, a probe is trained to detect claim-level hallucinations **using internal states**. It is found that this approach achieves comparable performance to sampling-based methods, but with 100 times higher efficiency.
+
+- [AAAI 2026] [Fine-Tuned LLMs Know They Don't Know: A Parameter-Efficient Approach to Recovering Honesty](https://arxiv.org/abs/2511.12991) *Zeyu Shi et.al.* 17 Nov 2025
 
 ### Grey-box Investigation
 
@@ -198,6 +213,10 @@ Need to access to the probability of generated tokens. Some methods also rely on
 - [Arxiv] [Semantic Energy: Detecting LLM Hallucination Beyond Entropy](https://arxiv.org/abs/2508.14496) *Huan Ma et.al.* 20 Aug 2025.
 
   > This paper introduces **Semantic Energy**, an energy-based uncertainty measure derived from the final-layer logits (before softmax) of language models. By combining semantic clustering with a Boltzmann-style energy formulation, it overcomes the limitations of **Semantic Entropy** in low-diversity settings and significantly improves hallucination detection in LLMs.
+
+- [NeurIPS 2025] [Your Pre-trained LLM is Secretly an Unsupervised Confidence Calibrator](https://arxiv.org/abs/2505.16690) *Beier Luo et.al.* 22 May 2025.
+
+  > It assumes that the pretrained model is better calibrated. Therefore, it learns a **temperature** on questions answered by both the pretrained model and the chat model, so that the chat model’s logits are brought closer to those of the pretrained model, achieving calibration. This does not require ground-truth answers.
 
 ### Black-box Investigation
 
@@ -270,6 +289,11 @@ These methods only require access to the model’s text output.
 
 - [Arxiv, Self-consistency] [Zero-knowledge LLM hallucination detection and mitigation through fine-grained cross-model consistency](https://arxiv.org/abs/2508.14314) *Aman Goel et.al.* 19 Aug 2025
 
+- [Arxiv] [SeSE: A Structural Information-Guided Uncertainty Quantification Framework for Hallucination Detection in LLMs](https://arxiv.org/abs/2511.16275) *Xingtao Zhao et.al.* 20 Nov 2025
+
+  > Traditional uncertainty methods focus on semantic consistency but overlook the **semantic relationship network among multiple answers**. The authors claim this is the first framework to systematically incorporate semantic structural information—such as hierarchy, directionality, and entailment—into LLM uncertainty estimation
+
+
 ## Adaptive RAG
 
 These methods focus directly on the “when to retrieve”, designing strategies and evaluating their effectiveness in Retrieval-Augmented Generation (RAG).
@@ -320,7 +344,7 @@ These methods focus directly on the “when to retrieve”, designing strategies
 
 - [EMNLP 2024 Findings, **UAR**] [Unified Active Retrieval for Retrieval Augmented Generation](https://arxiv.org/abs/2406.12534) *Qinyuan Cheng et.al.* 18 Jun 2024 
 
-  > Propose Unified Active Retrieval (UAR)，consists of four orthogonal criteria for determining the retrieval timing: Intent-aware; Knowledge-aware; Time-Sensitive-aware; Selfa-aware
+  > Propose Unified Active Retrieval (UAR)，consists of four orthogonal criteria for determining the retrieval timing: Intent-aware; Knowledge-aware; Time-Sensitive-aware; Selfa-aware. Train four classifiers based on the model's internal states.
 
 - [Arxiv, **SEAKR**] [SEAKR: Self-aware Knowledge Retrieval for Adaptive Retrieval Augmented Generation](https://arxiv.org/abs/2406.19215) *Zijun Yao et.al.* 27 Jun 2024
 
@@ -347,10 +371,12 @@ These methods focus directly on the “when to retrieve”, designing strategies
 - [EMNLP 2025] [The Hallucination Tax of Reinforcement Finetuning](https://arxiv.org/pdf/2505.13988) *Linxin Song et.al.* 20 May 2025
 - [Arxiv] [Reasoning about Uncertainty: Do Reasoning Models Know When They Don't Know?](https://arxiv.org/abs/2506.18183) *Zhiting Mei et.al.* 22 Jun 2025
 - [Arxiv] [Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty](https://www.arxiv.org/abs/2507.16806) *Mehul Damani et.al.* 22 Jul 2025
+- [Arxiv] [Toward Honest Language Models for Deductive Reasoning](https://arxiv.org/abs/2511.09222) *Jiarui Liu et.al.* 12 Nov 2025.
 
 ## Applications of Confidence
 
 - [Arxiv] [Confidence Estimation for Text-to-SQL in Large Language Models](https://arxiv.org/abs/2508.14056) *Sepideh Entezari Maleki et.al.* 8 Aug 2025
 - [Arxiv] [Deep Think with Confidence](https://arxiv.org/abs/2508.15260) *Yichao Fu et.al.* 21 Aug 2025
 - [EMNLP 2025] [CoCoA: Confidence and Context-Aware Adaptive Decoding for Resolving Knowledge Conflicts in Large Language Models](https://arxiv.org/abs/2508.17670) *Anant Khandelwal et.al.* 25 Aug 2025
+- [Arxiv] [As If We've Met Before: LLMs Exhibit Certainty in Recognizing Seen Files](https://arxiv.org/abs/2511.15192) *Haoding Li et.al.* 19 Nov 2025
 
