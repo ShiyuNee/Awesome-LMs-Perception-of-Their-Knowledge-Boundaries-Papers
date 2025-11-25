@@ -350,6 +350,16 @@ These methods focus directly on the “when to retrieve”, designing strategies
 
   > Use hidden states of the last generated tokens to meauser LLMs' uncertainty and use this uncertainty to decide: when to retrieve, re-rank the retrieved documents, choose the reasoning strategy
 
+
+- [EMNLP 2024, Self-Multi-RAG, **Multi-Round**] [Learning When to Retrieve, What to Rewrite, and How to Respond in Conversational QA](https://arxiv.org/abs/2409.15515)
+
+  > Extend Self-RAG to Conversational QA.  Introduces a **self-reflection–based framework** with three key decisions:
+  >
+  > 1. **When to Retrieve** – The model evaluates whether new retrieval is needed based on dialogue context and prior retrieved information. Uses **special self-reflection tokens**
+  > 2. **What to Rewrite** – The model rewrites the dialogue history into a retrieval-friendly query to improve retrieval relevance.
+  > 3. **How to Respond** – Combines retrieved documents and dialogue context to generate the final answer, with internal evaluation of relevance and grounding. Generates **multiple candidate answers** and scores them based on relevance, support, and utility, selecting the best one
+
+
 - [Arxiv, **Comprehensive study**] [Adaptive Retrieval Without Self-Knowledge? Bringing Uncertainty Back Home](https://arxiv.org/abs/2501.12835) *Viktor Moskvoretskii et.al.* 22 Jan 2025
 
   >Conduct a comprehensive analysis of 35 adaptive retrieval methods, including 8 recent approaches and 27 uncertainty estimation techniques, across 6 datasets using 10 metrics for QA performance, self-knowledge, and efficiency.
@@ -357,6 +367,12 @@ These methods focus directly on the “when to retrieve”, designing strategies
 - [Arxiv, Search-o1] [Search-o1: Agentic Search-Enhanced Large Reasoning Models](https://arxiv.org/abs/2501.05366) *Xiaoxi Li et.al.* 9 Jan 2025
 
   > Propose **Search-o1**, which equips reasoning models with retrieval capabilities and consists of two parts: (1) Prompting model that generates `<special_token>query<special_token>` whenever retrieval is needed; (2) **Reason-in-Documents**, which analyzes retrieved documents, refines them, and injects the distilled content into the chain of reasoning—effectively reducing noise and preserving reasoning fluency to avoid disrupting coherence.
+
+
+- [Arxiv, EMNLP 2025] [LLM-Independent Adaptive RAG: Let the Question Speak for Itself](https://arxiv.org/abs/2505.04253) *Maria Marina et.al.* 7 May 2025
+
+  > Currently, many adaptive retrieval methods rely on the LLM’s own uncertainty estimation to decide whether retrieval is needed. However, estimating uncertainty can be costly and impractical. This paper trains a lightweight classifier **using seven external features—rather than the model’s inherent uncertainty**—to determine whether retrieval is necessary.
+
 
 - [Arxiv, Search-R1] [Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning](https://arxiv.org/abs/2503.09516) *Bowen Jin et.al.* 12 Mar 2025
 
